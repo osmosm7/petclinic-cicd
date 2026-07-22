@@ -17,5 +17,14 @@ spec:
       containers:
       - name: petclinic
         image: 450444046629.dkr.ecr.ap-northeast-1.amazonaws.com/user19-petclinic:latest
+      
+        env:
+        - name: MYSQL_URL
+          value: jdbc:mysql://user19-db-mysql.cpuoiki0ilgq.ap-northeast-1.rds.amazonaws.com:3306/petclinic
+        - name: MYSQL_USER
+          value: admin
+        - name: MYSQL_PASSWORD
+          value: admin123!
+      
         ports:
         - containerPort: 8080
